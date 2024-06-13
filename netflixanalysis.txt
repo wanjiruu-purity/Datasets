@@ -1,0 +1,21 @@
+
+
+FINDINGS
+
+Count          			   17614
+AVG-duration   			  '69.82309526513001'
+Rating         			  '0.025434313614170548'
+Genre-Dramas, International       '724'
+country popularity 		  'You Don\'t Mess with the Zohan', 'UR'
+				  'Dear Dracula', 'TV-Y7-FV'
+				  'He-Man and the Masters of the Universe', 'TV-Y7'
+
+release year    		title, release_year
+				'Dear White People', '2021'
+				'He-Man and the Masters of the Universe', '2021'
+				'Kate', '2021'
+				'Nailed It', '2021'
+				'The Starling', '2021'
+
+
+

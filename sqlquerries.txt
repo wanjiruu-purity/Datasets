@@ -1,0 +1,54 @@
+SQL QUERRIES
+
+CREATE TABLE netflix_titles (
+    show_id VARCHAR(50),
+    type VARCHAR(50),
+    title VARCHAR(255),
+    director VARCHAR(255),
+    cast TEXT,
+    country VARCHAR(100),
+    date_added VARCHAR(50),
+    release_year INT,
+    rating VARCHAR(50),
+    duration VARCHAR(50),
+    listed_in TEXT,
+    description TEXT
+);
+LOAD DATA INFILE 'C:/Users/wanji/OneDrive/Documents/netflix_titles.csv'
+INTO TABLE netflix_titles
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(show_id, type, title, director, cast, country, date_added, release_year, rating, duration, listed_in, description);
+SELECT COUNT(*) FROM netflix_titles;
+SELECT AVG(duration) FROM netflix_titles;
+SELECT genre, COUNT(*) as count FROM netflix_titles GROUP BY genre ORDER BY count DESC LIMIT 1;
+
+SELECT AVG(rating) FROM netflix_titles;
+SELECT listed_in AS genre, COUNT(*) AS count 
+FROM netflix_titles 
+GROUP BY listed_in 
+ORDER BY count DESC 
+LIMIT 1;
+SELECT title, popularity 
+FROM netflix_titles 
+WHERE country = 'United States' 
+ORDER BY popularity DESC 
+LIMIT 5;
+
+SHOW COLUMNS FROM netflix_titles;
+
+SELECT title, rating 
+FROM netflix_titles 
+WHERE country = 'United States' 
+ORDER BY rating DESC 
+LIMIT 5;
+
+SELECT title, release_year 
+FROM netflix_titles 
+WHERE country = 'United States' 
+ORDER BY release_year DESC 
+LIMIT 5;
+
+
